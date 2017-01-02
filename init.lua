@@ -262,7 +262,7 @@ minetest.register_abm({
 	chance = 15,
 	catch_up = true,
 	action = function(pos, node)
-		if not default.can_grow(pos) then
+		if default.can_grow ~= nil and not default.can_grow(pos) then
 			return
 		end
 
